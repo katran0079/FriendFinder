@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/action_page.php">
+      Name (Required):<br />
+      <input type="text" name="firstname" />
+      <br />
+      Email (Required):<br />
+      <input type="text" name="photolink" />
+      <br /><br />
+    </form>
+
+    <h3>You value compassion and empathy.</h3>
+    <select id="q1">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You avoid conflict.</h3>
+    <select id="q2">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You'd rather stay in than go out.</h3>
+    <select id="q3">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You love animals.</h3>
+    <select id="q4">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You find that one must act first and ask questions later.</h3>
+    <select id="q5">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You prefer subtle approaches over direct approaches.</h3>
+    <select id="q6">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You stay calm under stressful situations.</h3>
+    <select id="q7">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You take the lead rather than follow.</h3>
+    <select id="q8">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You are not afraid of a challenge.</h3>
+    <select id="q9">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+    <h3>You are not afraid to break some rules to achieve your goals.</h3>
+    <select id="q10">
+      <option value="1">Strongly Disagree</option>
+      <option value="2">Disagree</option>
+      <option value="3">Neutral</option>
+      <option value="4">Agree</option>
+      <option value="5">Strongly Agree</option>
+    </select>
+
+    <a href="/api/results"><button id="submit">Submit your info!</button></a>
+  </body>
+  <script type="text/javascript">
+    var module = require("module");
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      var userInfo = {
+        name: $("#name")
+          .val()
+          .trim(),
+        photo: $("#photolink")
+          .val()
+          .trim(),
+        scores: [
+          $("#q1")
+            .val()
+            .trim(),
+          $("#q2")
+            .val()
+            .trim(),
+          $("#q3")
+            .val()
+            .trim(),
+          $("#q4")
+            .val()
+            .trim(),
+          $("#q5")
+            .val()
+            .trim(),
+          $("#q6")
+            .val()
+            .trim(),
+          $("#q7")
+            .val()
+            .trim(),
+          $("#q8")
+            .val()
+            .trim(),
+          $("#q9")
+            .val()
+            .trim(),
+          $("#q10")
+            .val()
+            .trim()
+        ]
+      };
+    });
+
+    module.exports = {
+      userInfo: userInfo
+    };
+  </script>
+</html>
