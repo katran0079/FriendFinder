@@ -97,12 +97,29 @@
       <option value="5">Strongly Agree</option>
     </select>
 
-    <a href="/api/results"><button id="submit">Submit your info!</button></a>
+    <button id="submit">Submit your info!</button>
+
+    <div id="modal-container" class="modal">
+      <div id="modal-content">
+        <span class="close">&times;</span>
+        <h2>Say Hello to Your New Best Friend</h2>
+        <h3 id="bestie"></h3>
+        <img id="best-photo" src="#" />
+      </div>
+    </div>
   </body>
   <script type="text/javascript">
     var module = require("module");
     $("#submit").on("click", function(event) {
       event.preventDefault();
+      var required = false;
+      if ($("#q1").val().trim() == "" || $("#q2").val().trim() == "") {
+        required = false;
+      } else {
+        required = true;
+
+
+      if (required = true) {
       var userInfo = {
         name: $("#name")
           .val()
@@ -111,39 +128,19 @@
           .val()
           .trim(),
         scores: [
-          $("#q1")
-            .val()
-            .trim(),
-          $("#q2")
-            .val()
-            .trim(),
-          $("#q3")
-            .val()
-            .trim(),
-          $("#q4")
-            .val()
-            .trim(),
-          $("#q5")
-            .val()
-            .trim(),
-          $("#q6")
-            .val()
-            .trim(),
-          $("#q7")
-            .val()
-            .trim(),
-          $("#q8")
-            .val()
-            .trim(),
-          $("#q9")
-            .val()
-            .trim(),
-          $("#q10")
-            .val()
-            .trim()
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
         ]
       };
-    });
+
 
     module.exports = {
       userInfo: userInfo
