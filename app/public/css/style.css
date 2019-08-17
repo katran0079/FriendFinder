@@ -1,0 +1,35 @@
+.jumbotron {
+  background: black;
+  opacity: 0.9;
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body {
+  background: white;
+}
+
+body {
+  background-image: url("http://i.imgur.com/QcGLhPS.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  color: white;
+}
+.body-div {
+  background: black;
+  opacity: 0.9;
+}
+hr {
+  border-color: inherit;
+  margin: 1em 0;
+}
+.title {
+  color: white;
+}
+#resultsModal img {
+  overflow: hidden;
+  width: 500px;
+}

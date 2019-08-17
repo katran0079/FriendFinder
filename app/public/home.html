@@ -3,17 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Class Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
   </head>
   <body>
-    <h1>Welcome to Friend Finder</h1>
-    <h2>The Best Place to Meet New Friends</h2>
-    <p>Take a quick survey to find people who are most similar to you!</p>
-
-    <a href="/survey"><button id="survey">Take the Survey!</button></a>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="title"><h1>Companion Finder</h1></div>
+        <h2 class="title">
+          Find the right companion for you!
+        </h2>
+        <br />
+        <div>
+          <a href="/survey">
+            <button type="button" class="btn btn-lg btn-primary">
+              <h4><span class="span"></span>Go to Survey</h4>
+            </button>
+          </a>
+        </div>
+        <div><a href="/api/friends">API list</a></div>
+      </div>
+    </div>
   </body>
-
-  <script></script>
 </html>
