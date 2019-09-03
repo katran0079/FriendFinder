@@ -13,7 +13,6 @@
 
 body {
   background-image: url("/img/login2.png");
-  background-color: red;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto;
@@ -33,4 +32,20 @@ hr {
 #resultsModal img {
   overflow: hidden;
   width: 500px;
+}
+
+option {
+  color: black;
+}
+
+select {
+  color: black;
+}
+
+.modal-title {
+  color: black;
+}
+
+#matchName {
+  color: black;
 }
